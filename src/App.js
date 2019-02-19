@@ -4,6 +4,10 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import { BrowserRouter, Route } from 'react-router-dom';
 import UpdateForm from './Components/UpdateForm';
+import DeleteForm from './Components/DeleteForm';
+import CreateForm from './Components/CreateForm';
+import Login from './Components/Login';
+
 
 
 class App extends Component {
@@ -12,7 +16,10 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar />
-          {/* <Route exact path="/" component={Home} /> */}
+          <Login />
+          {/* <Route exact path="/" component={CreateForm} /> */}
+          {/* <Route exact path="/" component={DeleteForm} /> */}
+          {/* <Route exact path="/" component={UpdateForm} /> */}
 
         </div>
       </BrowserRouter>

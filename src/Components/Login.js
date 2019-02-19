@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios'; 
+import axios from 'axios';
 
 class Login extends Component {
   constructor() {
@@ -46,22 +46,27 @@ class Login extends Component {
   render() {
     return (
       <div className="App">
-        <form class="form-signin" onSubmit={this.handleSubmit}>
-
-          <h1 class="h3 mb-3 font-weight-normal">{sessionStorage.getItem("logUser") === null ? "Please Sign In" : sessionStorage.getItem("logUser") + " is Logged in"}</h1>
-
-          <label for="username" class="sr-only">Username</label>
-          <div class="form-group">
-            <input onChange={this.handleChange} type="name" id="username" class="form-control" placeholder="Username" required="" autofocus="" />
+        <div className= "login-box">
+          <div>
+            <div className="col-md-6 mx-auto">
+              <div className="card card-body">
+                <h3 className="text-center mb-4">Log In</h3>
+                <div className="alert alert-danger">
+                  <a className="close font-weight-light" data-dismiss="alert">×</a>Please enter all fields to register.
+                </div>
+                <fieldset onSubmit={this.handleSubmit}>
+                  <div className="form-group has-error">
+                    <input className="form-control input-lg" onChange={this.handleUsername} placeholder="Username" name="username" type="text" />
+                  </div>
+                  <div className="form-group has-success">
+                    <input id="password" className="form-control input-lg" onChange={this.handlePassword} placeholder="Password" name="password" type="password" />
+                  </div>
+                  <input className="btn btn-lg btn-primary btn-block" onClick={this.handleSubmit} value="Log In" type="submit" />
+                </fieldset>
+              </div>
+            </div>
           </div>
-          <label for="inputPassword" class="sr-only">Password</label>
-          <div class="form-group">
-            <input onChange={this.handleChange} type="password" id="password" class="form-control" placeholder="Password" required="" />
-          </div>
-
-          <button class="btn btn-lg btn-primary btn-block" type="submit" onClick={this.handleSubmit}>Sign in</button>
-
-        </form>
+        </div>
       </div>
     );
   }
