@@ -4,9 +4,10 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import { BrowserRouter, Route } from 'react-router-dom';
 import UpdateForm from './Components/UpdateForm';
-import DeleteForm from './Components/DeleteForm';
-import CreateForm from './Components/CreateForm';
+import DeleteApartment from './Components/DeleteApartment';
+import AddApartment from './Components/AddApartment';
 import Login from './Components/Login';
+import FilterBar from './Components/FilterBar';
 
 
 
@@ -16,11 +17,16 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar />
-          <Login />
-          {/* <Route exact path="/" component={CreateForm} /> */}
-          {/* <Route exact path="/" component={DeleteForm} /> */}
-          {/* <Route exact path="/" component={UpdateForm} /> */}
-
+          <div className= "filterbar">
+           <FilterBar />
+          </div>
+          <div className= "Mainpara">
+          
+           <Route exact path="/" component={Login} />
+           {/* {(sessionStorage.getItem("Account"))=== null? <Route exact path="/addapartment" component={Login} />:<Route exact path="/addapartment" component={AddApartment} />}\*/} <Route exact path="/addapartment" component={AddApartment} /> 
+           {/* {(sessionStorage.getItem("Account"))=== null? <Route exact path="/delete" component={Login} />:<Route exact path="/delete" component={DeleteForm} /> } */} <Route exact path="/deleteapartment" component={DeleteApartment} />
+           {/* {(sessionStorage.getItem("Account"))=== null? <Route exact path="/updatetrainee" component={Login} />:<Route exact path="/updatetrainee" component={UpdateTrainee} />  } */} <Route exact path="/updateform" component={UpdateForm} />
+               </div> 
         </div>
       </BrowserRouter>
     );

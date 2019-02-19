@@ -8,6 +8,25 @@
   pointer-events: none;
 }
 
+#nav-ul {
+  width: 100%;
+  font-size: 20px;
+}
+
+#searchBtn {
+  margin-left: 20px;
+}
+
+li{
+padding: 5px 5px 5px 5px;
+display: table-cell;
+text-align: center;
+vertical-align: middle;
+float: left;
+width:25%;
+
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,13 +43,21 @@
   width: auto;
 }
 
-.Font-size{
+.Title{
   font-size: 30px;
   font-weight: bolder;
 }
 
+.Mainpara{
+  margin-top: 100px
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.filterbar {
+  margin-top: 10px
 }
 
 @keyframes App-logo-spin {

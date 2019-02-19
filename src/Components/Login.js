@@ -52,14 +52,14 @@ class Login extends Component {
               <div className="card card-body">
                 <h3 className="text-center mb-4">Log In</h3>
                 <div className="alert alert-danger">
-                  <a className="close font-weight-light" data-dismiss="alert">×</a>Please enter all fields to register.
+                  <a className="close font-weight-light" data-dismiss="alert" href="">×</a>Please enter all fields to login.
                 </div>
                 <fieldset onSubmit={this.handleSubmit}>
                   <div className="form-group has-error">
-                    <input className="form-control input-lg" onChange={this.handleUsername} placeholder="Username" name="username" type="text" />
+                    <input className="form-control input-lg" onChange={this.handleUsername} placeholder="Username*" name="username" type="text" />
                   </div>
                   <div className="form-group has-success">
-                    <input id="password" className="form-control input-lg" onChange={this.handlePassword} placeholder="Password" name="password" type="password" />
+                    <input id="password" className="form-control input-lg" onChange={this.handlePassword} placeholder="Password*" name="password" type="password" />
                   </div>
                   <input className="btn btn-lg btn-primary btn-block" onClick={this.handleSubmit} value="Log In" type="submit" />
                 </fieldset>
