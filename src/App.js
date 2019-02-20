@@ -7,8 +7,7 @@ import UpdateForm from './Components/UpdateForm';
 import DeleteApartment from './Components/DeleteApartment';
 import AddApartment from './Components/AddApartment';
 import Login from './Components/Login';
-import FilterBar from './Components/FilterBar';
-import OverviewTable from './Components/OverviewTable';
+import Home from './Components/Home';
 
 
 
@@ -18,13 +17,10 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar />
-          <div className= "filterbar">
-           <FilterBar />
-          </div>
           <div className= "Mainpara">
           
            <Route exact path="/" component={Login} />
-           <Route exact path="/overviewtable" component={OverviewTable} /> 
+           <Route exact path="/home" component={Home} /> 
            {/* {(sessionStorage.getItem("Account"))=== null? <Route exact path="/addapartment" component={Login} />:<Route exact path="/addapartment" component={AddApartment} />}\*/} <Route exact path="/addapartment" component={AddApartment} /> 
            {/* {(sessionStorage.getItem("Account"))=== null? <Route exact path="/delete" component={Login} />:<Route exact path="/delete" component={DeleteForm} /> } */} <Route exact path="/deleteapartment" component={DeleteApartment} />
            {/* {(sessionStorage.getItem("Account"))=== null? <Route exact path="/updatetrainee" component={Login} />:<Route exact path="/updatetrainee" component={UpdateTrainee} />  } */} <Route exact path="/updateform" component={UpdateForm} />

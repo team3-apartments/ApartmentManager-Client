@@ -49,7 +49,7 @@ width:25%;
 }
 
 .Mainpara{
-  margin-top: 100px
+  margin-top: 40px
 }
 
 .App-link {
@@ -57,7 +57,7 @@ width:25%;
 }
 
 .filterbar {
-  margin-top: 10px
+  margin-bottom: 50px
 }
 
 @keyframes App-logo-spin {
