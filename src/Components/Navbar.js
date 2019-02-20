@@ -6,7 +6,7 @@ class Navbar extends Component {
         return (
             <div className="App">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a className="navbar-brand" href="/"><img src={require("../Images/qa-logo.png")} /></a>
+                    <a className="navbar-brand" href="/home"><img src={require("../Images/qa-logo.png")} /></a>
                     <a className="Title">Accommodation Management</a>
                         <ul id="nav-ul">
                             <li><Link to="/addapartment">Add Apartment</Link></li>

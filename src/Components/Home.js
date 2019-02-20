@@ -23,7 +23,7 @@ class Home extends Component {
                     <tbody>
                         <tr className="table-danger">
                             <td>X1</td>
-                            <th><a href="/">1502</a></th>
+                            <th><a href="/apartmentdetail">1502</a></th>
                             <td>43</td>
                             <td>Henry Chia</td>
                             <td>December Intake</td>
@@ -32,7 +32,7 @@ class Home extends Component {
                         </tr>
                         <tr className="table-danger">
                             <td>Number One</td>
-                            <th><a href="/">1803</a></th>
+                            <th><a href="/apartmentdetail">1803</a></th>
                             <td>14</td>
                             <td>Josh Dowling</td>
                             <td>December Intake</td>
@@ -41,7 +41,7 @@ class Home extends Component {
                         </tr>
                         <tr className="table-warning">
                             <td>Heart</td>
-                            <th><a href="/">2201</a></th>
+                            <th><a href="/apartmentdetail">2201</a></th>
                             <td>20</td>
                             <td>Jim Bob</td>
                             <td>February Intake</td>
@@ -50,7 +50,7 @@ class Home extends Component {
                         </tr>
                         <tr className="table-primary">
                             <td >Number One</td>
-                            <th scope="row"><a href="/">1101</a></th>
+                            <th scope="row"><a href="/apartmentdetail">1101</a></th>
                             <td>34</td>
                             <td>Beyonce Knowles</td>
                             <td>March Intake</td>
