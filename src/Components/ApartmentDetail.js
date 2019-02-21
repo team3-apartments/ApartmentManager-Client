@@ -1,10 +1,23 @@
 import React, { Component } from 'react';
+import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 
 class ApartmentDetail extends Component {
+
   render() {
     return (
-      <div className="App">
-        <div id="current-upcoming-container">
+      <BootstrapTable data={ "products" }>
+        <TableHeaderColumn dataField='id' isKey>Product ID</TableHeaderColumn>
+        <TableHeaderColumn dataField='name'>Product Name</TableHeaderColumn>
+        <TableHeaderColumn dataField='price'>Product Price</TableHeaderColumn>
+      </BootstrapTable>
+    );
+  }
+}
+
+export default ApartmentDetail;
+
+
+{/* <div id="current-upcoming-container">
           <div>
             <ul className="list-group">
               <li id="border-header" className="list-group-item">Current:</li>
@@ -61,10 +74,4 @@ class ApartmentDetail extends Component {
               <li id="border" className="list-group-item">Notes: NA</li>
             </ul>
           </div>
-        </div>
-      </div>
-    );
-  }
-}
-
-export default ApartmentDetail;
+        </div>  */}

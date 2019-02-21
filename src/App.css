@@ -55,6 +55,19 @@ width:25%;
   right: 200px;
 }
 
+#current-upcoming-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 60% !important;
+  margin: 0 auto;
+  margin-bottom: 20px !important;
+}
+
+#current-upcoming-container > div > ul {
+ width: 600px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -97,15 +110,3 @@ width:25%;
   }
 }
 
-#current-upcoming-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 60% !important;
-  margin: 0 auto;
-  margin-bottom: 20px !important;
-}
-
-#current-upcoming-container > div > ul {
- width: 600px;
-}
