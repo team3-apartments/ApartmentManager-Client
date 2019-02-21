@@ -1,4 +1,4 @@
-export const BaseURL = "https://apartment-manager.uksouth.cloudapp.azure.com/apartmentManager"
+export const BaseURL = "https://apartment-manager.uksouth.cloudapp.azure.com/"
 export const GetAll = "/apartmentManager/getApartmentManager"
 export const GetByID = "/apartmentManager/getApartmentManagerByID"
 export const CreateApt = "/apartmentManager/createApartmentManager"
