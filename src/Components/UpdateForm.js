@@ -76,7 +76,7 @@ class UpdateForm extends Component {
                             <div className="card card-body">
                                 <h3 className="text-center mb-4">Update Form</h3>
                                 <div className="alert alert-danger">
-                                    <a className="close font-weight-light" data-dismiss="alert">×</a>Please enter all fields to update Account.
+                                    <a className="close font-weight-light" data-dismiss="alert" href="/">×</a>Please enter all fields to update Account.
                     </div>
                                 <form onSubmit={this.updateAccount}>
                                     <div className="form-group has-error">

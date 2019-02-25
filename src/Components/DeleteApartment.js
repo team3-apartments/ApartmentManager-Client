@@ -27,8 +27,9 @@ class DeleteApartment extends Component {
     handleApartmentToDelete = (id) => {
         axios.delete(TestURL + DeleteApt + id)
         .then(response => {
+            console.log(response.data)
             alert("Apartment has successfully been deleted.");
-            this.props.history.push("/");
+            this.props.history.push("/home");
         });
 
     }
@@ -41,8 +42,8 @@ class DeleteApartment extends Component {
             let apartmentLists = response.data;
             
             for (let i = 0; i < apartmentLists.length; i++) {
-                if (this.state.apartmentNumber == apartmentLists[i].apartmentNumber &&
-                    this.state.apartmentBuilding == apartmentLists[i].apartmentBuilding) {
+                if (this.state.apartmentNumber === apartmentLists[i].apartmentNumber &&
+                    this.state.apartmentBuilding === apartmentLists[i].apartmentBuilding) {
                     this.handleApartmentToDelete(apartmentLists[i].apartmentId);
                 }
             }
@@ -60,7 +61,7 @@ class DeleteApartment extends Component {
                             <div className="card card-body">
                                 <h3 className="text-center mb-4">Delete Apartment</h3>
                                 <div className="alert alert-danger">
-                                    <a className="close font-weight-light" data-dismiss="alert" href="">×</a>Please enter all fields to delete the apartment.
+                                    <a className="close font-weight-light" data-dismiss="alert" href="/">×</a>Please enter all fields to delete the apartment.
                 </div>
                                 <fieldset onSubmit={this.handleSubmit}>
                                     <div className="form-group has-error">

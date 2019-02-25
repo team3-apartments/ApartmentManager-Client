@@ -24,7 +24,7 @@ class Login extends Component {
         if (message.message === ("Login success")) {
           sessionStorage.setItem("logUser", JSON.stringify(message));
           window.location.reload(); 
-          alert(message.message + ".");
+        
           console.log(message);
 
         }else {
