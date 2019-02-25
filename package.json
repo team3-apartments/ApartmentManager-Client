@@ -5,13 +5,20 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
+    "hamoni-sync": "^1.1.1",
     "jquery": "^3.3.1",
+    "mdbootstrap": "^4.7.3",
+    "mdbreact": "^4.11.0",
     "popper.js": "^1.14.7",
     "react": "^16.8.2",
+    "react-bootstrap-table": "^4.3.1",
+    "react-bootstrap-table2-editor": "^1.2.2",
     "react-dom": "^16.8.2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "react-table": "^6.9.2",
+    "react-x-editable": "0.0.10-beta"
   },
   "scripts": {
     "start": "react-scripts start",
