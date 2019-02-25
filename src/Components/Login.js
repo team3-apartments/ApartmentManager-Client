@@ -1,27 +1,34 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { TestURL, CheckPassword} from '../Constants'
 
 class Login extends Component {
   constructor() {
     super();
     this.state = {
-      account: [],
-      username: null,
       password: null
     };
   }
 
+  handlePassword = event => {
+     this.setState({
+       password: event.target.value
+     })
+  }
+
   checkUser = () => {
 
-    axios.post(' #URL# ', {
-
-      username: this.state.username,
-      password: this.state.password
-    })
+    axios.get(TestURL+CheckPassword + this.state.password) 
       .then((response) => {
-        if (response.data[0] == this.state.username) {
-          sessionStorage.setItem("logUser", response.data[0]);
+        let message = response.data;
+        if (message.message === ("Login success")) {
+          sessionStorage.setItem("logUser", JSON.stringify(message));
+          window.location.reload(); 
+        
+          console.log(message);
 
+        }else {
+          alert(message.message + ". Please enter the correct password.");
         }
       })
       .catch(function (error) {
@@ -50,16 +57,13 @@ class Login extends Component {
           <div>
             <div className="col-md-6 mx-auto">
               <div className="card card-body">
-                <h3 className="text-center mb-4">Log In</h3>
+                <h1 className="text-center mb-4">Admin</h1>
                 <div className="alert alert-danger">
-                  <a className="close font-weight-light" data-dismiss="alert">×</a>Please enter all fields to register.
+                  <a className="close font-weight-light" data-dismiss="alert" href="">×</a>Please enter the password to log in.
                 </div>
-                <fieldset onSubmit={this.handleSubmit}>
-                  <div className="form-group has-error">
-                    <input className="form-control input-lg" onChange={this.handleUsername} placeholder="Username" name="username" type="text" />
-                  </div>
+                <fieldset onSubmit={this.handleSubmit }>
                   <div className="form-group has-success">
-                    <input id="password" className="form-control input-lg" onChange={this.handlePassword} placeholder="Password" name="password" type="password" />
+                    <input id="password" className="form-control input-lg" onChange={this.handlePassword} placeholder="Password*" name="password" type="password" required/>
                   </div>
                   <input className="btn btn-lg btn-primary btn-block" onClick={this.handleSubmit} value="Log In" type="submit" />
                 </fieldset>
@@ -73,3 +77,7 @@ class Login extends Component {
 }
 
 export default Login; 
+
+
+
+
