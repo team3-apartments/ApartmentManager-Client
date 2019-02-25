@@ -8,6 +8,7 @@
   pointer-events: none;
 }
 
+
 #nav-ul {
   width: 100%;
   font-size: 20px;
@@ -25,6 +26,11 @@ vertical-align: middle;
 float: left;
 width:25%;
 
+}
+
+#submit-button {
+  margin-left: 20px;
+  margin-bottom: 5px;
 }
 
 #border {
@@ -110,3 +116,12 @@ width:25%;
   }
 }
 
+#room-features {
+  width: 30%;
+  margin: 10px auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid lightgrey;
+  background-color: rgba(0,0,0,0.05);
+  color: black;
+}

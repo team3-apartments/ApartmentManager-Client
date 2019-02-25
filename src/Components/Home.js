@@ -68,8 +68,8 @@ class Home extends Component {
       
       <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-      <BootstrapTable id='MainTable' ref='table' data={this.state.aptmt} search strictSearch={true}  striped={true} hover={true}>
-        <TableHeaderColumn dataField='apartmentBuilding' dataSort={true}>Building Name</TableHeaderColumn>
+      <BootstrapTable id='MainTable'  ref='table' data={this.state.aptmt} search strictSearch={true}  striped={true} hover={true}>
+        <TableHeaderColumn  dataField='apartmentBuilding' dataSort={true}>Building Name</TableHeaderColumn>
         <TableHeaderColumn dataField='apartmentNumber' isKey={true} dataSort={true} onClick= {'/apartmentdetails'} > Apartment Number</TableHeaderColumn>
         <TableHeaderColumn dataField='roomNumber' dataSort={true} >Room Number</TableHeaderColumn>
         <TableHeaderColumn dataField='studentName' dataSort={true}>Full Name</TableHeaderColumn>
