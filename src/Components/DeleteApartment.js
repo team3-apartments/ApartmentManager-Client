@@ -25,7 +25,7 @@ class DeleteApartment extends Component {
     }
 
     handleApartmentToDelete = (id) => {
-        axios.delete(TestURL + DeleteApt + id)
+        axios.delete( DeleteApt + id)
         .then(response => {
             console.log(response.data)
             alert("Apartment has successfully been deleted.");
@@ -37,7 +37,7 @@ class DeleteApartment extends Component {
     handleSubmit = () => {
         axios({
             method: "get",
-            url: TestURL + GetAll,
+            url: GetAll,
         }).then(response => {
             let apartmentLists = response.data;
             

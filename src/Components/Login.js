@@ -18,7 +18,7 @@ class Login extends Component {
 
   checkUser = () => {
 
-    axios.get(TestURL+CheckPassword + this.state.password) 
+    axios.get(CheckPassword + this.state.password) 
       .then((response) => {
         let message = response.data;
         if (message.message === ("Login success")) {

@@ -17,7 +17,7 @@ class App extends Component {
         <div className="App">
           <Navbar />
           <div className= "mainPara">
-
+          
           {(sessionStorage.getItem("logUser"))=== null? <Route exact path="/" component={Login} />:<Route exact path="/" component={Home} />}
             {(sessionStorage.getItem("logUser"))=== null? <Route exact path="/apartmentDetail" component={Login} />:<Route exact path="/apartmentDetail" component={ApartmentDetail} />}
             {(sessionStorage.getItem("logUser"))=== null? <Route exact path="/addapartment" component={Login} />:<Route exact path="/addapartment" component={AddApartment} />}

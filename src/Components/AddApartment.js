@@ -25,7 +25,7 @@ class AddApartment extends Component {
     createApartment = () => {
         axios({
             method: "post",
-            url: TestURL + CreateApt,
+            url: CreateApt,
             data: {
                 apartmentNumber: this.state.apartmentNumber,
                 apartmentBuilding: this.state.apartmentBuilding,
