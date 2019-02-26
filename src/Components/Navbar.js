@@ -11,8 +11,8 @@ class Navbar extends Component {
                         <ul id="nav-ul">
                             <li><Link to="/home">Home</Link></li>
                             <li><Link to="/addapartment">Add Apartment</Link></li>
-                            
                             <li><Link to="/deleteapartment">Delete Apartment</Link></li>
+                            <li><Link to="/availableroom">Room Availability</Link></li>
                             {(sessionStorage.getItem("logUser"))=== null? null :<li><Link to="/" onClick={() => { sessionStorage.removeItem("logUser"); window.location.reload() }}>Log out</Link></li>}
                         </ul>
 
