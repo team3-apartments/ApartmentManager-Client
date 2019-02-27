@@ -21,7 +21,6 @@ class AvailableRooms extends Component {
     handleAvailableRooms = () => {
 
         let list = [];
-        console.log(this.state.value);
 
         axios.get(TestURL + EmptyByDate + this.state.value.format('YYYY-MM-DD'))
             .then(response => {
@@ -32,6 +31,7 @@ class AvailableRooms extends Component {
                         availableRoomList: list
                     })
                 }
+                console.log(this.state.availableRoomList);
             });
     }
 

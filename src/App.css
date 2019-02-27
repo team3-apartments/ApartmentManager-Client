@@ -24,7 +24,7 @@ display: table-cell;
 text-align: center;
 vertical-align: middle;
 float: left;
-width:25%;
+width:20%;
 
 }
 
@@ -124,4 +124,10 @@ width:25%;
   border: 1px solid lightgrey;
   background-color: rgba(0,0,0,0.05);
   color: black;
+}
+
+.mybtn {
+  width: 40%;
+  display: inline-block;
+  margin: 0px 10px 0px 10px;
 }

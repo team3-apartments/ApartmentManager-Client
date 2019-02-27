@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import '../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 import axios from 'axios';
-import { TestURL, GetAll } from '../Constants'
+import { TestURL, GetAll, AllIntakes } from '../Constants'
 
 class Home extends Component {
 
@@ -24,28 +24,22 @@ class Home extends Component {
 
   colFormatter = (event, cell, row) => {
     return <a href={"/apartmentDetail/?" + cell.apartmentBuilding + "/" + cell.apartmentNumber} > {cell.apartmentNumber}</a>;
-     }
+  }
 
-  popWorkingList() {
+  firstIntakes = (e) => {
+    let intakefix = true;
+    axios.get(TestURL + AllIntakes + intakefix).then(response => {
+      this.setState({ aptmt: response.data }, () => {
+      })
+    })
+  }
 
-    var temp = [];
-
-    for (let i = 0; i < this.state.aptmt.length; i++) {
-      console.log(this.state.aptmt[i].occupied);
-      if (this.state.aptmt[i].occupied === "false") {
-
-        temp.push({
-          apartmentBuilding: this.state.aptmt[i].apartmentBuilding,
-          apartmentName: this.state.aptmt[i].apartmentNumber,
-          roomNumber: this.state.aptmt[i].roomNumber,
-          studentName: this.state.aptmt[i].studentName,
-          intake: this.state.aptmt[i].intake,
-          startDate: this.state.aptmt[i].startDate,
-          endDate: this.state.aptmt[i].endDate
-        });
-      }
-      this.setState({ aptmt: temp });
-    }
+  secondIntakes = (e) => {
+    let intakefix = false;
+    axios.get(TestURL + AllIntakes + intakefix).then(response => {
+      this.setState({ aptmt: response.data }, () => {
+      })
+    })
   }
 
   render() {
@@ -77,7 +71,10 @@ class Home extends Component {
         <TableHeaderColumn dataField='startDate' dataSort={true}>Start Date</TableHeaderColumn>
         <TableHeaderColumn dataField='endDate' dataSort={true}>End Date</TableHeaderColumn>
       </BootstrapTable>
-      </div>
+      <br></br>
+      <button id='currentButton' className="btn btn-primary btn-lg mybtn" onClick={this.firstIntakes}>Current Intakes</button>
+      <button id='futureButton' className="btn btn-primary btn-lg mybtn" onClick={this.secondIntakes}>Later Intakes</button>
+    </div>
     );
   }
 }
