@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { TestURL, CreateApt} from '../Constants';
+import {CreateApt} from '../Constants';
 
 class AddApartment extends Component {
 
@@ -25,7 +25,7 @@ class AddApartment extends Component {
     createApartment = () => {
         axios({
             method: "post",
-            url: TestURL + CreateApt,
+            url: CreateApt,
             data: {
                 apartmentNumber: this.state.apartmentNumber,
                 apartmentBuilding: this.state.apartmentBuilding,

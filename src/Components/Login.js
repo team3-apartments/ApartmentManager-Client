@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { TestURL, CheckPassword} from '../Constants'
+import { CheckPassword} from '../Constants'
 
 class Login extends Component {
   constructor() {
@@ -18,7 +18,7 @@ class Login extends Component {
 
   checkUser = () => {
 
-    axios.get(TestURL+CheckPassword + this.state.password) 
+    axios.get(CheckPassword + this.state.password) 
       .then((response) => {
         let message = response.data;
         if (message.message === ("Login success")) {

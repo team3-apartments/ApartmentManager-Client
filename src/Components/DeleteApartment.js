@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { TestURL, DeleteApt, GetAll} from '../Constants'
+import { DeleteApt, GetAll} from '../Constants'
 
 class DeleteApartment extends Component {
 
@@ -25,7 +25,7 @@ class DeleteApartment extends Component {
     }
 
     handleApartmentToDelete = (id) => {
-        axios.delete(TestURL + DeleteApt + id)
+        axios.delete(DeleteApt + id)
         .then(response => {
             alert("Apartment has successfully been deleted.");
             this.props.history.push("/home");
@@ -39,7 +39,7 @@ class DeleteApartment extends Component {
 
         axios({
             method: "get",
-            url: TestURL + GetAll,
+            url: GetAll,
         }).then(response => {
             let apartmentLists = response.data;
             for (let i = 0; i < apartmentLists.length; i++) {

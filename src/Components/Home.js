@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import '../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 import axios from 'axios';
-import { TestURL, GetAll, AllIntakes } from '../Constants'
+import {GetAll, AllIntakes } from '../Constants'
 
 class Home extends Component {
 
@@ -15,7 +15,7 @@ class Home extends Component {
   constructor(props) {
     super(props);
 
-    axios.get(TestURL + GetAll).then(response => {
+    axios.get(GetAll).then(response => {
       this.setState({ aptmt: response.data }, () => {
       })
     })
@@ -28,7 +28,7 @@ class Home extends Component {
 
   firstIntakes = (e) => {
     let intakefix = true;
-    axios.get(TestURL + AllIntakes + intakefix).then(response => {
+    axios.get(AllIntakes + intakefix).then(response => {
       this.setState({ aptmt: response.data }, () => {
       })
     })
@@ -36,7 +36,7 @@ class Home extends Component {
 
   secondIntakes = (e) => {
     let intakefix = false;
-    axios.get(TestURL + AllIntakes + intakefix).then(response => {
+    axios.get(AllIntakes + intakefix).then(response => {
       this.setState({ aptmt: response.data }, () => {
       })
     })
