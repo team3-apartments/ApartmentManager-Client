@@ -23,10 +23,7 @@ class Login extends Component {
         let message = response.data;
         if (message.message === ("Login success")) {
           sessionStorage.setItem("logUser", JSON.stringify(message));
-          window.location.reload(); 
-        
-          console.log(message);
-
+          window.location.reload();
         }else {
           alert(message.message + ". Please enter the correct password.");
         }

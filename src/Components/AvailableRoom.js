@@ -31,7 +31,6 @@ class AvailableRooms extends Component {
                         availableRoomList: list
                     })
                 }
-                console.log(this.state.availableRoomList);
             });
     }
 
@@ -45,7 +44,6 @@ class AvailableRooms extends Component {
     }
 
     handleChange(date) {
-        console.log(date)
         this.setState({
             startDate: date
         });

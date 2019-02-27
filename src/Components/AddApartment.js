@@ -41,8 +41,6 @@ class AddApartment extends Component {
             }
         })
             .then(response => {
-                console.log(response.data)
-                console.log(response.data.startDate);
             })
             .catch(function (error) {
                 console.log(error);

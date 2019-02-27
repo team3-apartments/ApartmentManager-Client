@@ -45,7 +45,6 @@ class ApartmentDetail extends Component {
       bedStatus: this.state.aptmt[i].bedStatus,
       notes: this.state.aptmt[i].notes,
     }).then(response => {
-      console.log(response.data);
     });
 
   }
