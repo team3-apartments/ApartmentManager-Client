@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
-import { TestURL, GetByDetails, UpdateApt } from '../Constants'
+import { GetByDetails, UpdateApt } from '../Constants'
 import axios from 'axios';
 
 const cellEditProp = {
@@ -18,7 +18,7 @@ class ApartmentDetail extends Component {
     super(props);
     let params1 = window.location.search.substring(1);
     let params2 = params1.split('/');
-    axios.get(TestURL + GetByDetails + "/" + params2[0] + "/" + params2[1]).then(response => {
+    axios.get(GetByDetails + "/" + params2[0] + "/" + params2[1]).then(response => {
       this.setState({ aptmt: response.data },
       )
     })
@@ -32,7 +32,7 @@ class ApartmentDetail extends Component {
 
   axiosUpdate = (i) => {
 
-    axios.put(TestURL + UpdateApt + this.state.aptmt[i].apartmentId, {
+    axios.put(UpdateApt + this.state.aptmt[i].apartmentId, {
       apartmentNumber: this.state.aptmt[i].apartmentNumber,
       apartmentBuilding: this.state.aptmt[i].apartmentBuilding,
       roomNumber: parseInt(this.state.aptmt[i].roomNumber),

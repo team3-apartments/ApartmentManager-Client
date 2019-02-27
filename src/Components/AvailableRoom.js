@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { TestURL, EmptyByDate } from '../Constants';
+import { EmptyByDate } from '../Constants';
 import moment from 'moment';
 import Calendar from 'ciqu-react-calendar';
 
@@ -22,7 +22,7 @@ class AvailableRooms extends Component {
 
         let list = [];
 
-        axios.get(TestURL + EmptyByDate + this.state.value.format('YYYY-MM-DD'))
+        axios.get(EmptyByDate + this.state.value.format('YYYY-MM-DD'))
             .then(response => {
                 let roomList = response.data;
                 for (let i = 0; i < roomList.length; i++) {
