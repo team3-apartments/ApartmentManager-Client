@@ -27,7 +27,6 @@ class DeleteApartment extends Component {
     handleApartmentToDelete = (id) => {
         axios.delete(TestURL + DeleteApt + id)
         .then(response => {
-            console.log(response.data)
             alert("Apartment has successfully been deleted.");
             this.props.history.push("/home");
         });
@@ -35,19 +34,25 @@ class DeleteApartment extends Component {
     }
 
     handleSubmit = () => {
+
+        let deleteStatus = false;
+
         axios({
             method: "get",
             url: TestURL + GetAll,
         }).then(response => {
             let apartmentLists = response.data;
-            
             for (let i = 0; i < apartmentLists.length; i++) {
-                if (this.state.apartmentNumber === apartmentLists[i].apartmentNumber &&
+                if (Number(this.state.apartmentNumber) === apartmentLists[i].apartmentNumber &&
                     this.state.apartmentBuilding === apartmentLists[i].apartmentBuilding) {
+                    deleteStatus = true;
+                    console.log(apartmentLists[i].apartmentId);
                     this.handleApartmentToDelete(apartmentLists[i].apartmentId);
                 }
             }
-            window.location.reload(); 
+            if (deleteStatus === false) {
+                alert("Invalid Apartment Building or Number is invalid.");
+            }
         })
     }
 

@@ -8,9 +8,10 @@
   pointer-events: none;
 }
 
+
 #nav-ul {
   width: 100%;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 #searchBtn {
@@ -23,8 +24,13 @@ display: table-cell;
 text-align: center;
 vertical-align: middle;
 float: left;
-width:25%;
+width:20%;
 
+}
+
+#submit-button {
+  margin-left: 20px;
+  margin-bottom: 5px;
 }
 
 #border {
@@ -110,3 +116,18 @@ width:25%;
   }
 }
 
+#room-features {
+  width: 30%;
+  margin: 10px auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid lightgrey;
+  background-color: rgba(0,0,0,0.05);
+  color: black;
+}
+
+.mybtn {
+  width: 40%;
+  display: inline-block;
+  margin: 0px 10px 0px 10px;
+}

@@ -41,12 +41,12 @@ class AddApartment extends Component {
             }
         })
             .then(response => {
-                console.log(response.data)
             })
             .catch(function (error) {
                 console.log(error);
             });
-            alert("New Apartment has been added into the system.") 
+
+            alert("New Apartment has been added into the system."); 
             this.props.history.push("/home");
             window.location.reload(); 
         }
@@ -73,41 +73,41 @@ class AddApartment extends Component {
                             <div className="card card-body">
                                 <h3 className="text-center mb-4">Add A New Apartment</h3>
                                 <div className="alert alert-danger">
-                                    <a className="close font-weight-light" data-dismiss="alert" href="/">×</a>Please enter all fields to add an apartment to the list. <br/>If field is not applicable at this time, please enter n/a.
+                                    <a className="close font-weight-light" data-dismiss="alert" href="/">×</a>Please enter all fields to add an apartment to the list. <br/>If field is not applicable at this time, please enter 'NULL'.
                     </div>
                                 <form onSubmit={this.handleSubmit}>
                                     <div className="form-group has-error">
-                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Apartment Number" name="apartmentNumber" type="text" />
+                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Apartment Number" name="apartmentNumber" type="text" required/>
                                     </div>
                                     <div className="form-group has-error">
-                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Apartment Building" name="apartmentBuilding" type="text" />
+                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Apartment Building" name="apartmentBuilding" type="text" required/>
                                     </div>
                                     <div className="form-group has-error">
-                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Room Number" name="roomNumber" type="text" />
+                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Room Number" name="roomNumber" type="text" required/>
                                     </div>
                                     <div className="form-group has-error">
-                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Student Name" name="studentName" type="text" />
+                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Student Name" name="studentName" type="text" required/>
                                     </div>
                                     <div className="form-group has-error">
-                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Intake (Month)" name="intake" type="text"/>
+                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Intake (Month)" name="intake" type="text" required/>
                                     </div>
                                     <div className="form-group has-error">
-                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Start Date" name="startDate" type="text"/>
+                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Start Date YYYY-MM-DD" format="YYYY-MM-DD" name="startDate" type="date" required/>
                                     </div>
                                     <div className="form-group has-error">
-                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="End Date" name="endDate" type="text"/>
+                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="End Date YYYY-MM-DD" format="YYYY-MM-DD" name="endDate" type="date" required/>
                                     </div>
                                      <div className="form-group has-error">
-                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Clean Status" name="cleanStatus" type="text"/>
+                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Clean Status" name="cleanStatus" type="text" required/>
                                     </div>
                                     <div className="form-group has-error">
-                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Ensuite: True or False" name="ensuite" type="text"/>
+                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Ensuite: True or False" name="ensuite" type="text" required/>
                                     </div>
                                      <div className="form-group has-error">
-                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Single/Double Bed" name="bedStatus" type="text"/>
+                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Single/Double Bed" name="bedStatus" type="text" required/>
                                     </div>
                                     <div className="form-group has-error">
-                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Notes" name="notes" type="text"/>
+                                        <input className="form-control input-lg" onChange={this.handleChange} placeholder="Notes" name="notes" type="text" required/>
                                     </div>
                                     <input className="btn btn-lg btn-primary btn-block" value="Add New Apartment" type="submit" />
 

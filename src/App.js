@@ -7,6 +7,7 @@ import AddApartment from './Components/AddApartment';
 import Login from './Components/Login';
 import Home from './Components/Home';
 import ApartmentDetail from './Components/ApartmentDetail';
+import AvailableRoom from './Components/AvailableRoom';
 
 
 
@@ -18,7 +19,8 @@ class App extends Component {
           <Navbar />
           <div className= "mainPara">
 
-          {(sessionStorage.getItem("logUser"))=== null? <Route exact path="/" component={Login} />:<Route exact path="/" component={Home} />}
+            {(sessionStorage.getItem("logUser"))=== null? <Route exact path="/" component={Login} />:<Route exact path="/" component={Home} />}
+            {(sessionStorage.getItem("logUser"))=== null? <Route exact path="/apartmentDetail" component={Login} />:<Route exact path="/availableRoom" component={AvailableRoom} />}
             {(sessionStorage.getItem("logUser"))=== null? <Route exact path="/apartmentDetail" component={Login} />:<Route exact path="/apartmentDetail" component={ApartmentDetail} />}
             {(sessionStorage.getItem("logUser"))=== null? <Route exact path="/addapartment" component={Login} />:<Route exact path="/addapartment" component={AddApartment} />}
             {(sessionStorage.getItem("logUser"))=== null? <Route exact path="/deleteapartment" component={Login} />:<Route exact path="/deleteapartment" component={DeleteApartment} /> } 

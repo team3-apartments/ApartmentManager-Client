@@ -23,10 +23,7 @@ class Login extends Component {
         let message = response.data;
         if (message.message === ("Login success")) {
           sessionStorage.setItem("logUser", JSON.stringify(message));
-          window.location.reload(); 
-        
-          console.log(message);
-
+          window.location.reload();
         }else {
           alert(message.message + ". Please enter the correct password.");
         }
@@ -59,7 +56,7 @@ class Login extends Component {
               <div className="card card-body">
                 <h1 className="text-center mb-4">Admin</h1>
                 <div className="alert alert-danger">
-                  <a className="close font-weight-light" data-dismiss="alert" href="">×</a>Please enter the password to log in.
+                  <a className="close font-weight-light" data-dismiss="alert" href="/">×</a>Please enter the password to log in.
                 </div>
                 <fieldset onSubmit={this.handleSubmit }>
                   <div className="form-group has-success">
