@@ -20,7 +20,7 @@ class App extends Component {
           <div className= "mainPara">
 
             {(sessionStorage.getItem("logUser"))=== null? <Route exact path="/" component={Login} />:<Route exact path="/" component={Home} />}
-            {(sessionStorage.getItem("logUser"))=== null? <Route exact path="/apartmentDetail" component={Login} />:<Route exact path="/availableRoom" component={AvailableRoom} />}
+            {(sessionStorage.getItem("logUser"))=== null? <Route exact path="/availableroom" component={Login} />:<Route exact path="/availableroom" component={AvailableRoom} />}
             {(sessionStorage.getItem("logUser"))=== null? <Route exact path="/apartmentDetail" component={Login} />:<Route exact path="/apartmentDetail" component={ApartmentDetail} />}
             {(sessionStorage.getItem("logUser"))=== null? <Route exact path="/addapartment" component={Login} />:<Route exact path="/addapartment" component={AddApartment} />}
             {(sessionStorage.getItem("logUser"))=== null? <Route exact path="/deleteapartment" component={Login} />:<Route exact path="/deleteapartment" component={DeleteApartment} /> } 
